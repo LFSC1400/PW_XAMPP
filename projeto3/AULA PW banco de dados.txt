@@ -1,0 +1,12 @@
+# AULA PW banco de dados
+
+DELIMITER $$
+CREATE PROCEDURE listar_categoria (IN var_id INT)
+BEGIN
+	IF var_id IS NULL THEN
+    	SELECT * FROM categoria;
+    ELSE
+    	SELECT * FROM categoria WHERE id = var_id;
+    END IF;
+END$$
+DELIMITER ;
